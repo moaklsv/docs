@@ -3,8 +3,7 @@
 
 Die Software (Firmware) wird ständig weiter-entwickelt, um neue Funktionen hinzuzufügen, Fehler zu beheben, und um das allgemeine Anwendererlebnis zu verbessern
 
-Wir stellen aktualisierte Software regelmäßig bereit, daher kann es vorkommen wenn Sie den Router erhalten, dass evtl eine veraltete Version installiert ist, sollte dies der Fall sein
-empfehlen wir eine aktualisierung der Software
+Wir stellen regelmäßig aktualisierte Software  bereit, daher kann es vorkommen wenn Sie den Router erhalten, dass evtl eine veraltete Version installiert ist, sollte dies der Fall sein, empfehlen wir eine aktualisierung der Software
 
 1. Ist eine aktualisierung verfügbar, erscheint ein "New" Symbol im Webinterface
 2. Klicken Sie auf das Firmware Symbol, hier haben Sie verschiedene Möglichkeiten, die installierte Version wird angezeigt.
