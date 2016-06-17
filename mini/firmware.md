@@ -1,7 +1,8 @@
 
 ## Software von Gl.Inet
 
-Die Software (Firmware) wird ständig weiter-entwickelt, um neue Funktionieren hinzuzufügen, Fehler zu beheben, und um das allgemeine Anwendererlebnis zu verbessern
+Die Software (Firmware) wird ständig weiter-entwickelt, um neue Funktionen hinzuzufügen, Fehler zu beheben, und um das allgemeine Anwendererlebnis zu verbessern
+
 Wir stellen aktualisierte Software regelmäßig bereit, daher kann es vorkommen wenn Sie den Router erhalten, dass evtl eine veraltete Version installiert ist, sollte dies der Fall sein
 empfehlen wir eine aktualisierung der Software
 
