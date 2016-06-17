@@ -1,4 +1,4 @@
-OpenWrt Hints and Tricks
+OpenWrt Hinweise und Ratschläge
 ========================
 
-We will put our experience with OpenWrt here.
+Hier werden wir unsere Erfahrungen mit OpenWRT mitteilen
