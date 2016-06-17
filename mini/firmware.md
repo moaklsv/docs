@@ -1,94 +1,97 @@
 
-## Firmware UI
+## Software von Gl.Inet
 
-The firmware is under continuous development, to include new features, fix bugs and improve user experience etc. We release firmware quite frequently. When you receive the device, it is not supprisely you have an older firmware. We suggest you to upgrade to new firmware immediately.
+Die Software (Firmware) wird ständig weiter-entwickelt, um neue Funktionieren hinzuzufügen, Fehler zu beheben, und um das allgemeine Anwendererlebnis zu verbessern
+Wir stellen aktualisierte Software regelmäßig bereit, daher kann es vorkommen wenn Sie den Router erhalten, dass evtl eine veraltete Version installiert ist, sollte dies der Fall sein
+empfehlen wir eine aktualisierung der Software
 
-1. You will be displayed a `New` Icon when there is a new firmware available.
-2. Click the "Firmware" icon, you will be displayed options to upgrade the firmware. The current version is displayed.
-3. You can enable "auto update" option to let the router upgrade automatically if it detects a new version. This option is disabled by default. 
-4. You will have a `Download` button if there is a new version. Click it to start download.
+1. Ist eine aktualisierung verfügbar, erscheint ein "New" Symbol im Webinterface
+2. Klicken Sie auf das Firmware Symbol, hier haben Sie verschiedene Möglichkeiten, die installierte Version wird angezeigt.
+3. Sie können die Option der automatischen Firmware aktualisierung nutzen, so aktualisiert sich der Router eigenständig (Option Standardmäßig deaktiviert)
+4. Sollte eine neue Firmware vorhanden sein, erscheint der "Download" Button, Mit diesem können Sie den Download starten.
+
+
 
 ![Lan IP](src/firmware.png)
 
-## Download online
+## Firmware aktualisieren per Webinterface
 
-Click the `Download` button to start downloading. It will takes some seconds depending on the network. 
+Klicken Sie den "Download" Button um die aktualisierung der Firmware zu beginnen, dieser Vorgang kann einige Zeit dauern jeh nach der Internetverbindung
 
 ![Lan IP](src/firmware1.png)
 
-After download, the device will verify if the firmware is usable. If verified, you will have a `upgrade` button to start upgrade the firmware.
+Sobald der Download abgeschlossen ist, prüft das Gerät die Firmware, sobald die Prüfung erfolgreich war erscheint der `upgrade` Button 
+**Es wird empfohlen die Checkbox "Keep Settings" abzuwählen, um eine saubere installation zu haben**
 
-**It is suggested to uncheck the "Keep setting" check box to have a clean install.**
-
-**If you kept settings and encount problems after install, please reset the device by pressing and hold the `RESET` button for more than 8 seconds.**
+*Wenn es ein Problem gab mit der Einstellung "keep settings" (Router nicht erreichbar o.ä) drücken sie mindestens Acht Sekunden lang den Reset-Schalter**
 
 ![Lan IP](src/firmware2.png)
 
-## Upload your firmware
+## Eine eigene Firmware hochladen
 
-Before we release a new firmware, we may put them online for testing first. The link is http://www.gl-inet.com/firmware/testing
+Ehe wir eine neue Firmware veröffentlichen, stellen wir diese erst zum testen bereit die Adresse lautet: http://www.gl-inet.com/firmware/testing
 
-You may compile your own firmware, you can also upload to the router.
+Sie können auch ihre eigene Firmware erstellen (OpenWRT, LEDE)
 
-1. Click "Upload Firmware" button and you will have a rect to for uploading purpose.
-2. Click the rect to select file or just drag and drop your firmware to the rect. The firmware will upload and be verified. 
+1. Klicken Sie auf "Upload Firmware" es erscheint eine Dropbox wo Sie die Datei hochladen können.
 
-Warning: Don't rely on the verification status from the UI. You are responsible to upload a compatible firmware.
+Warnung: Sie sind dafür verantwortlich, dass die Firmware kompatibel ist, sie können Ihren Router "bricken" und müssen Ihn dann neu flashen (u-boot Reset)
 
 ![Lan IP](src/firmware3.png)
 
-## Start upgrading
+##  Mit der aktualisierung beginnen
 
-After you download/upload a new firmware and it is verified, you an upgrade now. Just click the `Upgrade` button and wait.
+Nachdem Sie die Firmware heruntergeladen haben, können Sie mit dem Upgrade beginnen. klicken Sie dazu auf "Upgrade"
 
-1. You need to wait about 3 minutes
-2. **Don't turn off the power.** If you do so, your device maybe bricked.
-3. You may need to reconnect to the device after upgrade. For example, your ssid and key maybe changed back to default one.
+1. Nach ungefähr drei Minuten ist die aktualisierung abgeschlossen
+2. **Nicht vom Strom trennen.** falls dies passiert, ist unter Umständen das Gerät defekt "gebricked".
+3. Nach der aktualisierung müssen Sie sich erneut verbinden, Evtl wird das WLan Kennwort zurückgesetzt auf das standard Kennwort.
 
 ![Lan IP](src/firmware4.png)
 
-## Revert to factory status
+## Gerät auf Werkseinstellungen zurücksetzen (webinterface)
 
-If you have problems in settings (for example repeater) or firmware upgrading, you can try to revert to factory status. 
+Wenn Sie Probleme mit einigen Einstellungen haben (z.B Repeater Modus, und können sich nun nicht mehr verbinden) so können Sie den Router auf Werkseinstellungen zurücksetzen.
 
-**factory status** means erasing all your settings, but not the original firmware if you upgrade it. If you just upgrade from v2.17 to v2.19, revert to factory default status will give a a clean v2.19.
+**Werkseinstellung** bedeutet dass alle Einstellungen auf die Standard-Einstellungen gesetzt werden, eine Werkseinstellung stellt keine alte Firmware wieder her.
 
-1. Clieck the "Revert to Factory Default" button.
-2. Read the warnings and click "Revert" now. It takes 1 or 2 mintures.
+1. Um die Einstellungen auf die Werkseinstellungen zu setzen drücken Sie den "Revert to Factory Default" Button.
+2. Lesen Sie die Warnungen und klicken Sie auf "Revert Now" , dieser vorgang dauert 1-2 Minuten.
 
 ![Lan IP](src/firmware5.png)
 
-### Using the Reset button to revert
+### Werkseinstellungen wiederherstellen (reset Taster)
 
-**After the firmware boot**, you can press and hold the `Reset` button for 8 seconds to revert to firmware back to factory status. The LEDs will flash in a pattern, indicating it is working. 
+**Nachdem das System gestartet ist**, Sie können den Reset Taster für acht Sekunden drücken. Die LEDS blinken in einem Muster um zu signalisieren dass der Werksreset geklappt hat. 
 
-This function only in our stock firmware. If you compiled your own firmware, it may not work. 
+Diese Funktion funktioniert  in der Original-Firmware, für andere Firmware ist dies nicht sichergestellt
 
-## Debricking using Uboot
+## Einen "gebrickten" Router wiederherstellen
 
-Sometimes you can brick your device, especially if you have your own firmware or uploaded an incompatible firmware.
+Manchmal kann es vorkommen dass der Router "gebrickt" ist, also unbenutzbar und nicht reagiert, dies kann insbesonderen auftreten bei eigener Firmware, oder bei veränderter Dritt-Firmware
 
-All the mini routers have uboot web UI so that you de-brick your device using a workable firmware.
+Alle unsere Router besitzen ein seperates Web-Interface um einen nicht mehr funktionierenden Router wiederherstellen zu können
+(U-Boot)
 
-The orignal post is here: http://www.gl-inet.com/how-to-enter-the-uboot-web-ui/ 
+Sie können die Original Anleitung hier lesen: http://www.gl-inet.com/how-to-enter-the-uboot-web-ui/ 
 
-1. Connect `only one` cable to your router, and leave the other LAN port unconnected.
-2. First press and hold the Reset button firmly; then power on your device. (Obey the first and then procedure)
-3. The LEDs will start to blink. Find the video for different routers below.
-4. Release your fingers when you see the LEDs flash `5` times for AR150, AR300M and 6416. For MT300N and MT300A, the LEDs will flash `3` times and enter Uboot Web UI automatically.
-5. Set your computer’s IP address to `192.168.1.2`
-6. User Firefox or Chrome to visit `http://192.168.1.1`
-7. Find your firmware and upload
-8. Wait around 3 minutes. Don’t power down your device while upgrading.
+1. Verbinden Sie ein Netzwerkkabel mit dem Router (Nur eine Netzwerkschnitstelle benutzen)
+2. Den Reset Taster feste gedrückt halten; danach Strom anschließen 
+3. Die LEDS fangen das blinken an, Siehe Videos für Details (Reset Taster gedrückt halten)
+4. Den Reset taster loslassen sobald die Leds `5` mal geblinkt haben für die Modelle: AR150, AR300M and 6416. Für den MT300N und MT300A, blinken die Leds dreimal,danach ist das u-Boot Webinterface geladen
+5. Vergeben Sie manuell die Ip-Adresse am Rechner: `192.168.1.2`
+6. Benutzen sie Google Chrome oder Firefox und rufen Sie die Webseite auf: `http://192.168.1.1`
+7. Wählen Sie die original Firmware
+8. Warten Sie 3 Minuten, Gerät nicht vom Strom trennen während des Vorgangs.
 
 AR150:
 
 [](https://youtu.be/vuMCaIub7K8)
 
-MT300N and MT300A
+MT300N und MT300A
 
 [](https://youtu.be/RETQdRS1cLY)
 
-GL.iNet6416 and complete upgrading prcess
+GL.iNet6416 und vollständiger aktualisierungs Prozess
 
 [](https://youtu.be/-E8EvDnJq0c)
