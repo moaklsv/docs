@@ -1,20 +1,22 @@
-## Connections
-You need to power the mini router up using a USB 5V/1A power adapter. The power adapters for smartphones are perfect for this.
+## Einrichtung
+Für die Stromversorgung ist ein micro-usb Kabel beigelegt, dies verbinden Sie bitte mit einem USB Netzteil (z.B von einem Handy)
 
-Please wait around 1 mintues until the router start up.
+eine Minute warten und der Router ist zur erstmaligen konfiguration bereit.
 
 ![Connections](src/connections1.png)
 
-You can connect the mini router's WAN port to your main router or modem using an Ethernet cable. 
+Um den Router mit ihrem existierenden Netzwerk zu verbinden, Schließen Sie ein Netzwerkkabel vom Lan Port ihres Routers (z.B der Fritzbox) an den Wan Port ihres Gl-Inets Routers
+
 
 ![Connections](src/connections.png)
 
-Now connect your PC to the LAN port or connect via wifi.
+Jetzt können Sie sich mit einem Netzwerkkabel verbinden (Lan Port) oder per W-Lan.
 
 ![Connections](src/connections3.png) 
 ![Connections](src/connections4.png)
 
-The SSID of the mini router should be printed on the bottom of the router. It should be one of the following format, according to your device models: 
+Die  Wlan Kennung ihres Mini-Routers ist auf der Rückseite gedruckt, er sollte eines der folgenden Formate besitzen jeh nach Modell ihres Routers
+
 ```
 GL-iNet-xxx
 GL-AR150-xxx
@@ -22,56 +24,58 @@ GL-AR300M-xxx
 GL-MT300N-xxx
 GL-MT300A-xxx
 ```
-The default wifi password is `goodlife`
 
-## First time Set Up
+Das standard Kennwort für das Wlan lautet "goodlife"
 
-Now open a browser (we recommend Chrome, firefox) and visit [http://192.168.8.1](http://192.168.8.1) 
+## Konfiguration
 
-You will have the welcome page. First you need to select your language. We now only have `Chinese` and `English`.
+Der Router muss erstmalig eingerichtet werden, hierzu öffnen Sie ihr Webbrowser (Wir empfehlen Google Chrome oder Mozilla Firefox) und öffnen Sie die Webseite
+[http://192.168.8.1](http://192.168.8.1) 
+
+Sie sehen die Willkommens-Seite , dort wählen Sie bitte ihre Sprache, momentan unterstützen wir `Chinese` und `English`.
  
 ![Connections](src/welcome.png)
 
-Then you need to select your region. You can use your mouse to click on the map. You can also select from the select box.
+Danach wählen Sie ihre Zeitzone (Dies können Sie über die Map oder über die Liste)
 
 ![Connections](src/region.png)
 
-Third, you should set your own password for this admin Interface. There is no default password. Before sure to input a password with length longer than 8.
+Als nächstes werden Sie aufgefordert ein Kennwort zu vergeben, Bitte beachten Sie Ihr Kennwort muss mehr als acht Zeichen besitzen.
 
-**This password is for the admin UI and the embedded Linux system. It doesn't change your wifi password.**
+**Dieses Kennwort dient nur für das Webinterface und als Root Zugang zum OpenWRT-System (SSH) ihr Wlan Kennwort bleibt unberührt.**
 
 ![Connections](src/password.png)
 
-Now let's click `Finish`. You will be logged into the admin UI.
+Als nächstes schließen Sie mit "Finish" die Einrichtung ab.
+## Das Webinterface
 
-## The Interface
+Unser Webinterface ist sehr einfach und intuitiv zu nutzen
 
-The interface is quite intuitive and straightforward.
-
-On the top is the icons for applications. On the left side is the settings. The middle is the main display area.
+Oben finden Sie die Applikationen . auf der linken Seite sehen Sie die Einstellungen. das mittlere Feld ist das Hauptfeld.
 
 ![Connections](src/main_ui.png)
 
-You can click the `Internet` icon to display the current method of connecting to the Internet. The default method is DHCP, which requires you using a cable to connect to the Internet.
+Wenn Sie auf das `Internet` Symbol klicken, sehen Sie die momentane Einstellung wie der Router sich zum Internet verbindet, standard ist DHCP, dies erfordert ein Netzwerkkabel welches mit ihrem Heimnetz und den Gl.Inet Router verbunden ist.
+
 
 ![Connections](src/internet_status.png)
 
-## Buttons and LEDs
+## Schalter und die LEDS
 
-You can use the Reset button to turn wifi on/off. 
+Sie können auf den Reset-Taster drücken um W-Lan an/auszuschalten
 
-The default function of the switch is to hide (right side) or show (left side) the SSID. 
+Die standard Funktion des Seitenschalters ist um die W-Lan Kennung sichtbar (rechte Seite) oder unsichtbar (linke Seite) zu schalten.
 
 ![Connections](src/buttons.png)
 
-The left LED is used for power indication. It should be always on.
+Die linke Grüne LED ist die Stromanzeige, sie leuchtet sobald der Router mit strom versorgt ist.
 
-The middle LED doesn't have functions by default. You can configure it according to your own use.
+Die mittlere LED hat keine Funktion, diese können Sie frei zuweisen im OpenWRT Menü (Im Webinterface auf Advanced Settings schalten)
 
-The right LED indicate the current status of WiFi. If WiFi is on it should light up. If you have data transmission, it should flash.
+die rechte rote LED zeigt den W-Lan Status an, sie leuchtet konstant Rot wenn das Wlan aktiviert ist, und blinkt, wenn Netzwerkverkehr über das Interface stattfindet.
 
 ![Connections](src/leds.png)
 
-## Change your ssid and key
+## Wlan Einstellungen
 
-You should change your ssid and key now to protect your mini router being used by others. Consult the WiFi setting sections.
+Sie sollten die standard Kennung vom Wlan ändern und ein anderes Kennwort vergeben, so dass ihr Router niemand anders benutzen kann ausser Sie selbst.
